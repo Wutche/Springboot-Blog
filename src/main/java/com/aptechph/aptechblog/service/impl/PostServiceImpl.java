@@ -6,6 +6,8 @@ import com.aptechph.aptechblog.repository.PostRepository;
 import com.aptechph.aptechblog.service.PostService;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class PostServiceImpl implements PostService {
     private PostRepository postRepository;
@@ -32,4 +34,10 @@ public class PostServiceImpl implements PostService {
         postResponse.setDescription(newPost.getDescription());
         return postResponse;
     }
+
+    @Override
+    public List<PostDTO> getAllPost() {
+        return null;
+    }
+
 }
