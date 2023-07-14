@@ -3,9 +3,9 @@ package com.aptechph.aptechblog.exception;
 public class ResourceNotFoundException extends RuntimeException{
     private String resourceName;
     private String fileName;
-    private String fieldName;
+    private long fieldName;
 
-    public ResourceNotFoundException(String resourceName, String fileName, String fieldName) {
+    public ResourceNotFoundException(String resourceName, String fileName, long fieldName) {
         super(String.format("%s not $s = not found %s", resourceName, fileName, fieldName));
         this.resourceName = resourceName;
         this.fileName = fileName;
@@ -20,7 +20,7 @@ public class ResourceNotFoundException extends RuntimeException{
         return fileName;
     }
 
-    public String getFieldName() {
+    public long getFieldName() {
         return fieldName;
     }
 }
